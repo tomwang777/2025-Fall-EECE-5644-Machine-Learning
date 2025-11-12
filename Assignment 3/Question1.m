@@ -5,7 +5,7 @@ clear; clc; close all;
 
 
 %% Define Data Distribution Parameters
-rng(42); % Reproduce
+rng(1); % Reproducibility
 
 % Number of classes and dimensions
 C = 4;
@@ -277,4 +277,5 @@ function y_pred = predictMLP(net, X)
     % Predict class labels
     outputs = net(X);
     [~, y_pred] = max(outputs, [], 1);
+
 end
