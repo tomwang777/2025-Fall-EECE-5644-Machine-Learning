@@ -4,7 +4,7 @@
 clear; clc; close all;
 
 %% Define True GMM Parameters
-rng(42); % Reproduce
+rng(1); % Reproducibility
 
 % GMM with 4 components, 2-Dimensional data
 n_dim = 2;
@@ -359,4 +359,5 @@ function plotGaussian2D(mu, Sigma, color, nstd)
     ellipse = V * sqrt(D) * circle + mu;
     
     plot(ellipse(1, :), ellipse(2, :), 'Color', color, 'LineWidth', 2);
+
 end
